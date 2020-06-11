@@ -5,52 +5,52 @@ node {
 //---------------- Variables/Definitions
     env.WORKSPACE = pwd()
     env.JENKINSHOME = "/mnt/jenkins-home"
-    env.TERRAFORMPATH = "/mnt/jenkins-home/terraform-${BRANCH_NAME}"
+    env.TERRAFORMPATH = "/mnt/jenkins-home/terraform-${env.BRANCH_NAME}"
     env.TERRAFORM ="${env.TERRAFORMPATH}/terraform"
     env.TERRAFORMVERSION = "0.11.7"
     env.TERRAFORMURL = "https://releases.hashicorp.com/terraform/${env.TERRAFORMVERSION}/terraform_${env.TERRAFORMVERSION}_linux_amd64.zip"
-    env.YARNPATH = "/mnt/disable-home/yarn-${BRANCH_NAME}"
+    env.YARNPATH = "/mnt/disable-home/yarn-${env.BRANCH_NAME}"
     env.YARN ="${env.YARNPATH}/yarn-v1.9.4/bin/yarn"
     env.YARNVERSION = "1.9.4"
     env.YARNURL = "https://yarnpkg.com/latest.tar.gz"
-    env.NODEPATH ="/mnt/jenkins-home/node-${BRANCH_NAME}"
-    env.TF_PLAN_FILE = "TF-${BRANCH_NAME}-plan.out"
+    env.NODEPATH ="/mnt/jenkins-home/node-${env.BRANCH_NAME}"
+    env.TF_PLAN_FILE = "TF-${env.BRANCH_NAME}-plan.out"
     env.TF_COMMON_PLAN_FILE = "TF-common-plan.out"
     env.NODEVERSION = "v8.11.2"
     env.NODE = "${env.NODEPATH}/node-${env.NODEVERSION}-linux-x64/bin/node"
     env.NPM  = "${env.NODEPATH}/node-${env.NODEVERSION}-linux-x64/bin/npm"
-    env.NGPATH = "/mnt/jenkins-home/ng-${BRANCH_NAME}"
+    env.NGPATH = "/mnt/jenkins-home/ng-${env.BRANCH_NAME}"
     env.NG = "${env.NGPATH}/lib/node_modules/@angular/cli/bin/ng"
     env.NGVERSION = "@angular/cli: 1.0.0"
-    env.AWSPATH = "/mnt/jenkins-home/aws-${BRANCH_NAME}"
+    env.AWSPATH = "/mnt/jenkins-home/aws-${env.BRANCH_NAME}"
     env.AWS = "${env.AWSPATH}/bin/aws"
     env.AWSREGION = "eu-west-2"
     env.AWSVERSION = "11529"
     env.AWSURL = "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip"
-    env.MySQLPATH = "/mnt/jenkins-home/mysql-${BRANCH_NAME}"
+    env.MySQLPATH = "/mnt/jenkins-home/mysql-${env.BRANCH_NAME}"
     env.MySQL = "${env.MySQLPATH}/mysql"
     env.MySQLVERSION = "5.6.35"
     env.PATH = "${env.NODEPATH}/node-${env.NODEVERSION}-linux-x64/bin/:${env.DOTNETPATH}:${env.PATH}" 
-    env.FRONTENDHASHFILE = "/mnt/jenkins-home/${BRANCH_NAME}-frontend-hash"
-    env.DOTNETHASHFILE = "/mnt/jenkins-home/${BRANCH_NAME}-dotnet-code-hash"
-    env.DOTNET_CONTAINER_GITHASH_FILE = "/mnt/jenkins-home/${BRANCH_NAME}-dotnet-container-githash"
-    env.FRONTEND_CONTAINER_GITHASH_FILE = "/mnt/jenkins-home/${BRANCH_NAME}-frontend-container-githash"
-    env.DOTNETBINARYSTASH = "/mnt/jenkins-home/${BRANCH_NAME}-dotnet-binary-stash/"
-    env.DOTNETPUBLISHSTASH = "/mnt/jenkins-home/${BRANCH_NAME}-dotnet-publish-stash/"
-    env.ANGULARAPPSTASH = "/mnt/jenkins-home/${BRANCH_NAME}-angular-app-stash/"
-    env.ANGULARAPPHASHFILE = "/mnt/jenkins-home/${BRANCH_NAME}-angular-app-code-hash"
-    env.ANGULARPUBLICHASHFILE = "/mnt/jenkins-home/${BRANCH_NAME}-angular-public-code-hash"
-    env.REACTAPPSTASH = "/mnt/jenkins-home/${BRANCH_NAME}-react-app-stash/"
-    env.REACTAPPHASHFILE = "/mnt/jenkins-home/${BRANCH_NAME}-react-app-code-hash"
-    env.REACTPUBLICHASHFILE = "/mnt/jenkins-home/${BRANCH_NAME}-react-public-code-hash"
+    env.FRONTENDHASHFILE = "/mnt/jenkins-home/${env.BRANCH_NAME}-frontend-hash"
+    env.DOTNETHASHFILE = "/mnt/jenkins-home/${env.BRANCH_NAME}-dotnet-code-hash"
+    env.DOTNET_CONTAINER_GITHASH_FILE = "/mnt/jenkins-home/${env.BRANCH_NAME}-dotnet-container-githash"
+    env.FRONTEND_CONTAINER_GITHASH_FILE = "/mnt/jenkins-home/${env.BRANCH_NAME}-frontend-container-githash"
+    env.DOTNETBINARYSTASH = "/mnt/jenkins-home/${env.BRANCH_NAME}-dotnet-binary-stash/"
+    env.DOTNETPUBLISHSTASH = "/mnt/jenkins-home/${env.BRANCH_NAME}-dotnet-publish-stash/"
+    env.ANGULARAPPSTASH = "/mnt/jenkins-home/${env.BRANCH_NAME}-angular-app-stash/"
+    env.ANGULARAPPHASHFILE = "/mnt/jenkins-home/${env.BRANCH_NAME}-angular-app-code-hash"
+    env.ANGULARPUBLICHASHFILE = "/mnt/jenkins-home/${env.BRANCH_NAME}-angular-public-code-hash"
+    env.REACTAPPSTASH = "/mnt/jenkins-home/${env.BRANCH_NAME}-react-app-stash/"
+    env.REACTAPPHASHFILE = "/mnt/jenkins-home/${env.BRANCH_NAME}-react-app-code-hash"
+    env.REACTPUBLICHASHFILE = "/mnt/jenkins-home/${env.BRANCH_NAME}-react-public-code-hash"
     env.PUBLIC_SSH_DEPLOY_KEY_ID = ""
     env.PRIVATE_SSH_DEPLOY_KEY_ID = ""
     env.STATE_S3_BUCKET_FILE = "/mnt/jenkins-home/state-s3-bucket"
     env.STATE_S3_BUCKET = readFile(env.STATE_S3_BUCKET_FILE).trim()
 
 
-//    env.APP_S3_BUCKET_FILE = "/tmp/${BRANCH_NAME}-app-s3-bucket"
-//    env.PUBLIC_S3_BUCKET_FILE = "/tmp/${BRANCH_NAME}-public-s3-bucket"
+//    env.APP_S3_BUCKET_FILE = "/tmp/${env.BRANCH_NAME}-app-s3-bucket"
+//    env.PUBLIC_S3_BUCKET_FILE = "/tmp/${env.BRANCH_NAME}-public-s3-bucket"
 
 
 //-----------------Checkout
@@ -82,12 +82,12 @@ node {
    stage('Environment') {
      
 
-     if ("${BRANCH_NAME}" == "master") {  
+     if ("${env.BRANCH_NAME}" == "master") {  
         env.TFVARS_FILE = "prod.tfvars"
         env.STATE_KEY = "prod"
         } else {
-        env.TFVARS_FILE = "${BRANCH_NAME}.tfvars"
-        env.STATE_KEY = "${BRANCH_NAME}"
+        env.TFVARS_FILE = "${env.BRANCH_NAME}.tfvars"
+        env.STATE_KEY = "${env.BRANCH_NAME}"
         }
 
         sh "cat Terraform/prod-env/${env.TFVARS_FILE} | grep -E '^env-name' | tr -d ' ' | awk '{print \$2 }' FS='=' | awk '{print \$2 }' FS='\"' |tr -dc ' \$0-9a-z-'   > env-name"
@@ -137,7 +137,7 @@ node {
         }
         
         if (exitCode == "2") {
-            if ("${BRANCH_NAME}" == "master") { 
+            if ("${env.BRANCH_NAME}" == "master") { 
                 echo "Plan Awaiting Approval: ${env.JOB_NAME} - ${env.BUILD_NUMBER}"
                 try {
                     input message: 'Apply Plan?', ok: 'Apply'
@@ -374,7 +374,7 @@ node {
 
     stage('Angular App Build') {
         if (env.ANGULARAPPCOMPILE == "true") {
-            sh "cd src/angular/dmarc-service;export YARN_CACHE_FOLDER=/mnt/jenkins-home/yarn/${BRANCH_NAME}; ${env.YARN} --frozen-lockfile;${env.YARN} build"
+            sh "cd src/angular/dmarc-service;export YARN_CACHE_FOLDER=/mnt/jenkins-home/yarn/${env.BRANCH_NAME}; ${env.YARN} --frozen-lockfile;${env.YARN} build"
 //            sh "cd src/angular/dmarc-service; ${env.NPM} install"
 //            sh "${env.NPM} --version"
 //            sh "cd src/angular/dmarc-service; ${env.NPM} run build"
@@ -421,7 +421,7 @@ node {
 
     stage('React App Build') {
         if (env.REACTAPPCOMPILE == "true") {
-            if ("${BRANCH_NAME}" != "master") {   
+            if ("${env.BRANCH_NAME}" != "master") {   
                 env.NODE_ENV="development"
             }
             sh "${env.AWS} s3 cp s3://ncsc-mailcheck-static-assets/HelveticaNeue.ttf src/react/ukncsc-semantic-ui-theme/src/themes/default/assets/fonts/"
@@ -511,7 +511,7 @@ node {
         if (exitCode == "2") {
             echo "Plan Awaiting Approval: ${env.JOB_NAME} - ${env.BUILD_NUMBER}"
             try {
-                if ("${BRANCH_NAME}" == "master") {    
+                if ("${env.BRANCH_NAME}" == "master") {    
                     input message: 'Apply Plan?', ok: 'Apply'
                 }
                 env.APPLY = "true"
@@ -579,7 +579,7 @@ node {
         def stagingBucketName = sh(returnStdout : true, script: 'cat Terraform/common/common.tfvars | grep staging-report-bucket | awk \'{print $3}\' FS=\'[=\"]\'').trim()
         def devBucketName = sh(returnStdout : true, script: 'cat Terraform/common/common.tfvars | grep dev-report-bucket | awk \'{print $3}\' FS=\'[=\"]\'').trim()
         echo "Report buckets Staging: ${stagingBucketName} Dev: ${devBucketName}"
-        if ("${BRANCH_NAME}" == "master") {
+        if ("${env.BRANCH_NAME}" == "master") {
             echo "Checking to see if plan was approved, or there are no changes to make...${env.apply}"
         if (env.APPLY == "true") {
             echo "Applying the plan..."
@@ -605,7 +605,7 @@ node {
     
 
     stage('Code Release') {
-        if ("${BRANCH_NAME}" == "master") { 
+        if ("${env.BRANCH_NAME}" == "master") { 
             sh "mkdir -p -p ~/.ssh/"
             sshagent(["${env.PRIVATE_SSH_DEPLOY_KEY_ID}"]) {
                 try {
@@ -690,10 +690,10 @@ String commit_sha() {
     commit_sha ? commit_sha : "unknown"
 }
 
-String branch_name_short() {
-    sh 'echo $BRANCH_NAME | head -c3 | tee .out'
-    def branch_name_short = readFile('.out').trim()
-    branch_name_short ? branch_name_short : "unknown"
+String env.BRANCH_NAME_short() {
+    sh 'echo $env.BRANCH_NAME | head -c3 | tee .out'
+    def env.BRANCH_NAME_short = readFile('.out').trim()
+    env.BRANCH_NAME_short ? env.BRANCH_NAME_short : "unknown"
 }
 
 void install_aws() {
