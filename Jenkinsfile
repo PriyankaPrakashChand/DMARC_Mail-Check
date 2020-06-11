@@ -690,10 +690,10 @@ String commit_sha() {
     commit_sha ? commit_sha : "unknown"
 }
 
-String env.BRANCH_NAME_short() {
+String BRANCH_NAME_short() {
     sh 'echo $env.BRANCH_NAME | head -c3 | tee .out'
-    def env.BRANCH_NAME_short = readFile('.out').trim()
-    env.BRANCH_NAME_short ? env.BRANCH_NAME_short : "unknown"
+    def BRANCH_NAME_short = readFile('.out').trim()
+    BRANCH_NAME_short ? BRANCH_NAME_short : "unknown"
 }
 
 void install_aws() {
