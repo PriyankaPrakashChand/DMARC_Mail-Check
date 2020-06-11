@@ -1,0 +1,14 @@
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common\bin\Debug\netstandard2.0\Dmarc.Common.deps.json
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common\bin\Debug\netstandard2.0\Dmarc.Common.dll
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common\bin\Debug\netstandard2.0\Dmarc.Common.pdb
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common\bin\Debug\netstandard2.0\Dmarc.Common.Interface.dll
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common\bin\Debug\netstandard2.0\Dmarc.Common.Interface.pdb
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common\obj\Debug\netstandard2.0\Dmarc.Common.csprojAssemblyReference.cache
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common\obj\Debug\netstandard2.0\Dmarc.Common.Validation.ValidationResources.resources
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common\obj\Debug\netstandard2.0\Dmarc.Common.csproj.GenerateResource.cache
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common\obj\Debug\netstandard2.0\Dmarc.Common.AssemblyInfoInputs.cache
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common\obj\Debug\netstandard2.0\Dmarc.Common.AssemblyInfo.cs
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common\obj\Debug\netstandard2.0\Dmarc.Common.csproj.CoreCompileInputs.cache
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common\obj\Debug\netstandard2.0\Dmarc.Common.csproj.CopyComplete
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common\obj\Debug\netstandard2.0\Dmarc.Common.dll
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common\obj\Debug\netstandard2.0\Dmarc.Common.pdb

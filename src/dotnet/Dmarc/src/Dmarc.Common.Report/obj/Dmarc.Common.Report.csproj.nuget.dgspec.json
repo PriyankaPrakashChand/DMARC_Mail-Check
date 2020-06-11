@@ -1,0 +1,236 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\pinkb\\OneDrive\\Documents\\winter soldier\\Internship\\DESC\\mail-check\\src\\dotnet\\Dmarc\\src\\Dmarc.Common.Report\\Dmarc.Common.Report.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\pinkb\\OneDrive\\Documents\\winter soldier\\Internship\\DESC\\mail-check\\src\\dotnet\\Dmarc\\src\\Dmarc.Common.Interface\\Dmarc.Common.Interface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pinkb\\OneDrive\\Documents\\winter soldier\\Internship\\DESC\\mail-check\\src\\dotnet\\Dmarc\\src\\Dmarc.Common.Interface\\Dmarc.Common.Interface.csproj",
+        "projectName": "Dmarc.Common.Interface",
+        "projectPath": "C:\\Users\\pinkb\\OneDrive\\Documents\\winter soldier\\Internship\\DESC\\mail-check\\src\\dotnet\\Dmarc\\src\\Dmarc.Common.Interface\\Dmarc.Common.Interface.csproj",
+        "packagesPath": "C:\\Users\\pinkb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pinkb\\OneDrive\\Documents\\winter soldier\\Internship\\DESC\\mail-check\\src\\dotnet\\Dmarc\\src\\Dmarc.Common.Interface\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\pinkb\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "AWSSDK.SQS": {
+              "target": "Package",
+              "version": "[3.3.3.17, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
+            },
+            "System.Net.Sockets": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\pinkb\\OneDrive\\Documents\\winter soldier\\Internship\\DESC\\mail-check\\src\\dotnet\\Dmarc\\src\\Dmarc.Common.Report\\Dmarc.Common.Report.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pinkb\\OneDrive\\Documents\\winter soldier\\Internship\\DESC\\mail-check\\src\\dotnet\\Dmarc\\src\\Dmarc.Common.Report\\Dmarc.Common.Report.csproj",
+        "projectName": "Dmarc.Common.Report",
+        "projectPath": "C:\\Users\\pinkb\\OneDrive\\Documents\\winter soldier\\Internship\\DESC\\mail-check\\src\\dotnet\\Dmarc\\src\\Dmarc.Common.Report\\Dmarc.Common.Report.csproj",
+        "packagesPath": "C:\\Users\\pinkb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pinkb\\OneDrive\\Documents\\winter soldier\\Internship\\DESC\\mail-check\\src\\dotnet\\Dmarc\\src\\Dmarc.Common.Report\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\pinkb\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\pinkb\\OneDrive\\Documents\\winter soldier\\Internship\\DESC\\mail-check\\src\\dotnet\\Dmarc\\src\\Dmarc.Common\\Dmarc.Common.csproj": {
+                "projectPath": "C:\\Users\\pinkb\\OneDrive\\Documents\\winter soldier\\Internship\\DESC\\mail-check\\src\\dotnet\\Dmarc\\src\\Dmarc.Common\\Dmarc.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[3.3.21.1, )"
+            },
+            "AWSSDK.SQS": {
+              "target": "Package",
+              "version": "[3.3.3.17, )"
+            },
+            "Amazon.Lambda.Core": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Amazon.Lambda.S3Events": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "Amazon.Lambda.Serialization.Json": {
+              "target": "Package",
+              "version": "[1.3.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[2.0.6, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\pinkb\\OneDrive\\Documents\\winter soldier\\Internship\\DESC\\mail-check\\src\\dotnet\\Dmarc\\src\\Dmarc.Common\\Dmarc.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pinkb\\OneDrive\\Documents\\winter soldier\\Internship\\DESC\\mail-check\\src\\dotnet\\Dmarc\\src\\Dmarc.Common\\Dmarc.Common.csproj",
+        "projectName": "Dmarc.Common",
+        "projectPath": "C:\\Users\\pinkb\\OneDrive\\Documents\\winter soldier\\Internship\\DESC\\mail-check\\src\\dotnet\\Dmarc\\src\\Dmarc.Common\\Dmarc.Common.csproj",
+        "packagesPath": "C:\\Users\\pinkb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pinkb\\OneDrive\\Documents\\winter soldier\\Internship\\DESC\\mail-check\\src\\dotnet\\Dmarc\\src\\Dmarc.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\pinkb\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\pinkb\\OneDrive\\Documents\\winter soldier\\Internship\\DESC\\mail-check\\src\\dotnet\\Dmarc\\src\\Dmarc.Common.Interface\\Dmarc.Common.Interface.csproj": {
+                "projectPath": "C:\\Users\\pinkb\\OneDrive\\Documents\\winter soldier\\Internship\\DESC\\mail-check\\src\\dotnet\\Dmarc\\src\\Dmarc.Common.Interface\\Dmarc.Common.Interface.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "AWSSDK.KeyManagementService": {
+              "target": "Package",
+              "version": "[3.3.6.5, )"
+            },
+            "AWSSDK.SimpleSystemsManagement": {
+              "target": "Package",
+              "version": "[3.3.30.1, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[0.44.1, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

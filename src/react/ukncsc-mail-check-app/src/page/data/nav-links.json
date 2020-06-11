@@ -1,0 +1,17 @@
+{
+  "left": [
+    { "name": "Check a domain", "link": "/home" },
+    { "name": "My Domains", "link": "/my-domains" },
+    { "name": "Email Abuse", "link": "/a/#/email-abuse", "external": true }
+  ],
+
+  "right": [
+    {
+      "name": "Domain Security",
+      "link": "/domain-security",
+      "roleTypes": ["Admin"]
+    },
+    { "name": "Metrics", "link": "/metrics", "roleTypes": ["Admin"] },
+    { "name": "Admin", "link": "/admin", "roleTypes": ["Admin"] }
+  ]
+}

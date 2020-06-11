@@ -1,0 +1,12 @@
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.PublicSuffix\bin\Debug\netstandard2.0\Dmarc.Common.PublicSuffix.deps.json
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.PublicSuffix\bin\Debug\netstandard2.0\Dmarc.Common.PublicSuffix.dll
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.PublicSuffix\bin\Debug\netstandard2.0\Dmarc.Common.PublicSuffix.pdb
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.PublicSuffix\bin\Debug\netstandard2.0\Dmarc.Common.Interface.dll
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.PublicSuffix\bin\Debug\netstandard2.0\Dmarc.Common.Interface.pdb
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.PublicSuffix\obj\Debug\netstandard2.0\Dmarc.Common.PublicSuffix.csprojAssemblyReference.cache
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.PublicSuffix\obj\Debug\netstandard2.0\Dmarc.Common.PublicSuffix.AssemblyInfoInputs.cache
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.PublicSuffix\obj\Debug\netstandard2.0\Dmarc.Common.PublicSuffix.AssemblyInfo.cs
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.PublicSuffix\obj\Debug\netstandard2.0\Dmarc.Common.PublicSuffix.csproj.CoreCompileInputs.cache
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.PublicSuffix\obj\Debug\netstandard2.0\Dmarc.Common.PublicSuffix.csproj.CopyComplete
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.PublicSuffix\obj\Debug\netstandard2.0\Dmarc.Common.PublicSuffix.dll
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.PublicSuffix\obj\Debug\netstandard2.0\Dmarc.Common.PublicSuffix.pdb

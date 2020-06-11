@@ -1,0 +1,258 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DomainSecurityDetailsMessages when provided with a markdown flag it should match the snapshot 1`] = `
+<div>
+  <div
+    class="ui red large circular label"
+  >
+    <span
+      class="DomainSecurityPill"
+    >
+      1
+      Urgent
+    </span>
+  </div>
+  <p
+    class="DomainSecuritySummaryMessages--intro"
+  >
+    Your 
+    DMARC
+    configuration has
+    1 element
+    that
+    require
+    urgent attention.
+  </p>
+  <div
+    style="margin: 0.2em 0em; max-width: 600px;"
+    class="ui error message MailCheckMessage--container"
+  >
+    <div>
+      <p>
+        <a
+          href="https://ncsc.gov.uk"
+        >
+          link
+        </a>
+      </p>
+    </div>
+  </div>
+  <div
+    class="ui hidden divider"
+  />
+</div>
+`;
+
+exports[`DomainSecurityDetailsMessages when provided with failures it should match the snapshot 1`] = `
+<div>
+  <div
+    class="ui red large circular label"
+  >
+    <span
+      class="DomainSecurityPill"
+    >
+      1
+      Urgent
+    </span>
+  </div>
+  <p
+    class="DomainSecuritySummaryMessages--intro"
+  >
+    Your 
+    DMARC
+    configuration has
+    1 element
+    that
+    require
+    urgent attention.
+  </p>
+  <div
+    style="margin: 0.2em 0em; max-width: 600px;"
+    class="ui error message MailCheckMessage--container"
+  >
+    oh noes
+  </div>
+  <div
+    class="ui hidden divider"
+  />
+</div>
+`;
+
+exports[`DomainSecurityDetailsMessages when provided with failures, warnings and inconclusives it should match the snapshot 1`] = `
+<div>
+  <div
+    class="ui red large circular label"
+  >
+    <span
+      class="DomainSecurityPill"
+    >
+      1
+      Urgent
+    </span>
+  </div>
+  <p
+    class="DomainSecuritySummaryMessages--intro"
+  >
+    Your 
+    DMARC
+    configuration has
+    1 element
+    that
+    require
+    urgent attention.
+  </p>
+  <div
+    style="margin: 0.2em 0em; max-width: 600px;"
+    class="ui error message MailCheckMessage--container"
+  >
+    oh noes
+  </div>
+  <div
+    class="ui hidden divider"
+  />
+  <div
+    class="ui yellow large circular label"
+  >
+    <span
+      class="DomainSecurityPill"
+    >
+      1
+      Advisory
+    </span>
+  </div>
+  <p
+    class="DomainSecuritySummaryMessages--intro"
+  >
+    Your 
+    DMARC
+    configuration has
+    1 element
+    that can be improved.
+  </p>
+  <div
+    style="margin: 0.2em 0em; max-width: 600px;"
+    class="ui warning message MailCheckMessage--container"
+  >
+    oh woes
+  </div>
+  <div
+    class="ui hidden divider"
+  />
+  <div
+    class="ui grey large circular label"
+  >
+    <span
+      class="DomainSecurityPill"
+    >
+      1
+      Inconclusive
+    </span>
+  </div>
+  <p
+    class="DomainSecuritySummaryMessages--intro"
+  >
+    Your 
+    DMARC
+    configuration has 
+    1
+    inconclusive
+    element
+    .
+  </p>
+  <div
+    style="margin: 0.2em 0em; max-width: 600px;"
+    class="ui message MailCheckMessage--container"
+  >
+    who knows
+  </div>
+</div>
+`;
+
+exports[`DomainSecurityDetailsMessages when provided with inconclusives it should match the snapshot 1`] = `
+<div>
+  <div
+    class="ui grey large circular label"
+  >
+    <span
+      class="DomainSecurityPill"
+    >
+      1
+      Inconclusive
+    </span>
+  </div>
+  <p
+    class="DomainSecuritySummaryMessages--intro"
+  >
+    Your 
+    DMARC
+    configuration has 
+    1
+    inconclusive
+    element
+    .
+  </p>
+  <div
+    style="margin: 0.2em 0em; max-width: 600px;"
+    class="ui message MailCheckMessage--container"
+  >
+    who knows
+  </div>
+</div>
+`;
+
+exports[`DomainSecurityDetailsMessages when provided with no failures, warnings or inconclusives it should match the snapshot 1`] = `
+<div>
+  <div
+    class="ui green large circular label"
+  >
+    <span
+      class="DomainSecurityPill"
+    >
+      1 Positive
+    </span>
+  </div>
+  <div
+    class="ui hidden divider"
+  />
+  <div
+    style="margin: 0.2em 0em; max-width: 600px;"
+    class="ui success message MailCheckMessage--container"
+  >
+    DMARC
+    well configured.
+  </div>
+</div>
+`;
+
+exports[`DomainSecurityDetailsMessages when provided with warnings it should match the snapshot 1`] = `
+<div>
+  <div
+    class="ui yellow large circular label"
+  >
+    <span
+      class="DomainSecurityPill"
+    >
+      1
+      Advisory
+    </span>
+  </div>
+  <p
+    class="DomainSecuritySummaryMessages--intro"
+  >
+    Your 
+    DMARC
+    configuration has
+    1 element
+    that can be improved.
+  </p>
+  <div
+    style="margin: 0.2em 0em; max-width: 600px;"
+    class="ui warning message MailCheckMessage--container"
+  >
+    oh woes
+  </div>
+  <div
+    class="ui hidden divider"
+  />
+</div>
+`;

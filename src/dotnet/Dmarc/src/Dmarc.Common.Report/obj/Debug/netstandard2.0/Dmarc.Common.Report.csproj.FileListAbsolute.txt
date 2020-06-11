@@ -1,0 +1,14 @@
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.Report\bin\Debug\netstandard2.0\Dmarc.Common.Report.deps.json
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.Report\bin\Debug\netstandard2.0\Dmarc.Common.Report.dll
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.Report\bin\Debug\netstandard2.0\Dmarc.Common.Report.pdb
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.Report\bin\Debug\netstandard2.0\Dmarc.Common.dll
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.Report\bin\Debug\netstandard2.0\Dmarc.Common.Interface.dll
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.Report\bin\Debug\netstandard2.0\Dmarc.Common.pdb
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.Report\bin\Debug\netstandard2.0\Dmarc.Common.Interface.pdb
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.Report\obj\Debug\netstandard2.0\Dmarc.Common.Report.csprojAssemblyReference.cache
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.Report\obj\Debug\netstandard2.0\Dmarc.Common.Report.AssemblyInfoInputs.cache
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.Report\obj\Debug\netstandard2.0\Dmarc.Common.Report.AssemblyInfo.cs
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.Report\obj\Debug\netstandard2.0\Dmarc.Common.Report.csproj.CoreCompileInputs.cache
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.Report\obj\Debug\netstandard2.0\Dmarc.Common.Report.csproj.CopyComplete
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.Report\obj\Debug\netstandard2.0\Dmarc.Common.Report.dll
+C:\Users\pinkb\OneDrive\Documents\winter soldier\Internship\DESC\mail-check\src\dotnet\Dmarc\src\Dmarc.Common.Report\obj\Debug\netstandard2.0\Dmarc.Common.Report.pdb
