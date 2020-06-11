@@ -99,7 +99,7 @@ node {
         echo "Role to assume: ${env.ROLE_TO_ASSUME}"
 // Get AWS account numbers from parameter store
 
-        env.AWSACCOUNT =  "593185172677"
+        env.AWSACCOUNT =  "551354234311"
         env.buildAwsAccount = sh(returnStdout : true, script: "${env.AWS} ssm get-parameters --names build-account --region=${env.AWSREGION} | jq -r '.Parameters[0].Value'").trim()
         env.ecrAwsAccount = sh(returnStdout : true, script: "${env.AWS} ssm get-parameters --names ecr-account --region=${env.AWSREGION} | jq -r '.Parameters[0].Value'").trim()
         if (env.ROLE_TO_ASSUME != "") {
