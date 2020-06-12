@@ -1,0 +1,64 @@
+//---------------- Variables/Definitions
+    env.WORKSPACE = pwd()
+    env.JENKINSHOME = "/mnt/jenkins-home"
+    env.TERRAFORMPATH = "/mnt/jenkins-home/terraform-${env.BRANCH_NAME}"
+    env.TERRAFORM ="${env.TERRAFORMPATH}/terraform"
+    env.TERRAFORMVERSION = "0.11.7"
+    env.TERRAFORMURL = "https://releases.hashicorp.com/terraform/${env.TERRAFORMVERSION}/terraform_${env.TERRAFORMVERSION}_linux_amd64.zip"
+    env.YARNPATH = "/mnt/disable-home/yarn-${env.BRANCH_NAME}"
+    env.YARN ="${env.YARNPATH}/yarn-v1.9.4/bin/yarn"
+    env.YARNVERSION = "1.9.4"
+    env.YARNURL = "https://yarnpkg.com/latest.tar.gz"
+    env.NODEPATH ="/mnt/jenkins-home/node-${env.BRANCH_NAME}"
+    env.TF_PLAN_FILE = "TF-${env.BRANCH_NAME}-plan.out"
+    env.TF_COMMON_PLAN_FILE = "TF-common-plan.out"
+    env.NODEVERSION = "v8.11.2"
+    env.NODE = "${env.NODEPATH}/node-${env.NODEVERSION}-linux-x64/bin/node"
+    env.NPM  = "${env.NODEPATH}/node-${env.NODEVERSION}-linux-x64/bin/npm"
+    env.NGPATH = "/mnt/jenkins-home/ng-${env.BRANCH_NAME}"
+    env.NG = "${env.NGPATH}/lib/node_modules/@angular/cli/bin/ng"
+    env.NGVERSION = "@angular/cli: 1.0.0"
+    env.AWSPATH = "/mnt/jenkins-home/aws-${env.BRANCH_NAME}"
+    env.AWS = "${env.AWSPATH}/bin/aws"
+    env.AWSREGION = "eu-west-2"
+    env.AWSVERSION = "11529"
+    env.AWSURL = "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip"
+    env.MySQLPATH = "/mnt/jenkins-home/mysql-${env.BRANCH_NAME}"
+    env.MySQL = "${env.MySQLPATH}/mysql"
+    env.MySQLVERSION = "5.6.35"
+    env.PATH = "${env.NODEPATH}/node-${env.NODEVERSION}-linux-x64/bin/:${env.DOTNETPATH}:${env.PATH}" 
+    env.FRONTENDHASHFILE = "/mnt/jenkins-home/${env.BRANCH_NAME}-frontend-hash"
+    env.DOTNETHASHFILE = "/mnt/jenkins-home/${env.BRANCH_NAME}-dotnet-code-hash"
+    env.DOTNET_CONTAINER_GITHASH_FILE = "/mnt/jenkins-home/${env.BRANCH_NAME}-dotnet-container-githash"
+    env.FRONTEND_CONTAINER_GITHASH_FILE = "/mnt/jenkins-home/${env.BRANCH_NAME}-frontend-container-githash"
+    env.DOTNETBINARYSTASH = "/mnt/jenkins-home/${env.BRANCH_NAME}-dotnet-binary-stash/"
+    env.DOTNETPUBLISHSTASH = "/mnt/jenkins-home/${env.BRANCH_NAME}-dotnet-publish-stash/"
+    env.ANGULARAPPSTASH = "/mnt/jenkins-home/${env.BRANCH_NAME}-angular-app-stash/"
+    env.ANGULARAPPHASHFILE = "/mnt/jenkins-home/${env.BRANCH_NAME}-angular-app-code-hash"
+    env.ANGULARPUBLICHASHFILE = "/mnt/jenkins-home/${env.BRANCH_NAME}-angular-public-code-hash"
+    env.REACTAPPSTASH = "/mnt/jenkins-home/${env.BRANCH_NAME}-react-app-stash/"
+    env.REACTAPPHASHFILE = "/mnt/jenkins-home/${env.BRANCH_NAME}-react-app-code-hash"
+    env.REACTPUBLICHASHFILE = "/mnt/jenkins-home/${env.BRANCH_NAME}-react-public-code-hash"
+    env.PUBLIC_SSH_DEPLOY_KEY_ID = ""
+    env.PRIVATE_SSH_DEPLOY_KEY_ID = ""
+    env.STATE_S3_BUCKET_FILE = "/mnt/jenkins-home/state-s3-bucket"
+    if ( fileExists (env.STATE_S3_BUCKET_FILE) ) {
+    env.STATE_S3_BUCKET = readFile(env.STATE_S3_BUCKET_FILE).trim()
+}
+   else  {env.STATE_S3_BUCKET = env.STATE_S3_BUCKET_FILE.createNewFile()
+}
+
+echo "line 56 reached"
+//    env.APP_S3_BUCKET_FILE = "/tmp/${env.BRANCH_NAME}-app-s3-bucket"
+//    env.PUBLIC_S3_BUCKET_FILE = "/tmp/${env.BRANCH_NAME}-public-s3-bucket"
+
+
+//-----------------Checkout
+//        gitClean()
+    slackSend "Build Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+    sh "rm -rf *"
+    sh "rm -rf .git"
+    checkout scm
+    sh "git rev-parse --short HEAD | tee shorthash"
+    env.GITSHORTHASH = readFile('shorthash').trim()
+    echo "Checkout complete... extracting environment name from tfvars"
