@@ -53,6 +53,7 @@ node {
    else  {env.STATE_S3_BUCKET = env.STATE_S3_BUCKET_FILE.createNewFile()
 }
 
+echo "line 56 reached"
 //    env.APP_S3_BUCKET_FILE = "/tmp/${env.BRANCH_NAME}-app-s3-bucket"
 //    env.PUBLIC_S3_BUCKET_FILE = "/tmp/${env.BRANCH_NAME}-public-s3-bucket"
 
@@ -60,7 +61,6 @@ node {
 //-----------------Checkout
 //        gitClean()
     slackSend "Build Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
-    echo "line 63 reached"
     sh "rm -rf *"
     sh "rm -rf .git"
     checkout scm
