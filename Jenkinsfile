@@ -60,6 +60,7 @@ node {
 //-----------------Checkout
 //        gitClean()
     slackSend "Build Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+    echo "line 63 reached"
     sh "rm -rf *"
     sh "rm -rf .git"
     checkout scm
