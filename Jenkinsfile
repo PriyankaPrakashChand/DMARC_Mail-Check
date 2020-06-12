@@ -1,4 +1,3 @@
-org.jenkinsci.plugins.pipeline.modeldefinition.parser.RuntimeASTTransformer.SCRIPT_SPLITTING_TRANSFORMATION=true
 properties([ disableConcurrentBuilds(), pipelineTriggers([githubPush()])])
 node {
     stage('Checkout') {
