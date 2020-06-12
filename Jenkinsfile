@@ -2,7 +2,7 @@ properties([ disableConcurrentBuilds(), pipelineTriggers([githubPush()])])
 node {
     stage('Checkout') {
 
-        sh '/checkoutScript'
+        sh './checkoutScript'
    }
    stage('Tools') {
    // Output build container environment
