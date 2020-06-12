@@ -46,8 +46,11 @@ node {
     env.PUBLIC_SSH_DEPLOY_KEY_ID = ""
     env.PRIVATE_SSH_DEPLOY_KEY_ID = ""
     env.STATE_S3_BUCKET_FILE = "/mnt/jenkins-home/state-s3-bucket"
+    if ( fileExists 'test1' ) {
     env.STATE_S3_BUCKET = readFile(env.STATE_S3_BUCKET_FILE).trim()
-
+}
+   else  {env.STATE_S3_BUCKET = env.STATE_S3_BUCKET_FILE.createNewFile()
+}
 
 //    env.APP_S3_BUCKET_FILE = "/tmp/${env.BRANCH_NAME}-app-s3-bucket"
 //    env.PUBLIC_S3_BUCKET_FILE = "/tmp/${env.BRANCH_NAME}-public-s3-bucket"
