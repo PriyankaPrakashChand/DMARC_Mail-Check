@@ -1,3 +1,6 @@
+import jenkins.model.*
+jenkins = Jenkins.instance
+
 properties([ disableConcurrentBuilds(), pipelineTriggers([githubPush()])])
 node {
 
