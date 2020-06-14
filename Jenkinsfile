@@ -919,6 +919,7 @@ void write_aws_config(String awsConfigFile) {
 }
    else  {
        File file = new File(env.STATE_S3_BUCKET_FILE)
+       file.getParentFile().mkdirs();
        env.STATE_S3_BUCKET = file.createNewFile()
 }
 
