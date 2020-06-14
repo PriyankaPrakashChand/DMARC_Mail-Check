@@ -914,14 +914,14 @@ void write_aws_config(String awsConfigFile) {
      env.PUBLIC_SSH_DEPLOY_KEY_ID = ""
     env.PRIVATE_SSH_DEPLOY_KEY_ID = ""
     env.STATE_S3_BUCKET_FILE = "/mnt/jenkins-home/state-s3-bucket"
-    if ( fileExists (env.STATE_S3_BUCKET_FILE) ) {
+//     if ( fileExists (env.STATE_S3_BUCKET_FILE) ) {
     env.STATE_S3_BUCKET = readFile(env.STATE_S3_BUCKET_FILE).trim()
-}
-   else  {
-       File file = new File(env.STATE_S3_BUCKET_FILE)
-       file.getParentFile().mkdirs();
-       env.STATE_S3_BUCKET = file.createNewFile()
-}
+// }
+//    else  {
+//        File file = new File(env.STATE_S3_BUCKET_FILE)
+//        file.getParentFile().mkdirs();
+//        env.STATE_S3_BUCKET = file.createNewFile()
+// }
 
 //	env.APP_S3_BUCKET_FILE = "/tmp/${env.BRANCH_NAME }-app-s3-bucket"
 //    env.PUBLIC_S3_BUCKET_FILE = "/tmp/${env.BRANCH_NAME }-public-s3-bucket"
