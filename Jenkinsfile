@@ -915,6 +915,8 @@ void write_aws_config(String awsConfigFile) {
     env.PRIVATE_SSH_DEPLOY_KEY_ID = ""
     env.STATE_S3_BUCKET_FILE = "/mnt/jenkins-home/state-s3-bucket"
 //     if ( fileExists (env.STATE_S3_BUCKET_FILE) ) {
+
+    echo 'hello'
     env.STATE_S3_BUCKET = readFile(env.STATE_S3_BUCKET_FILE).trim()
 // }
 //    else  {
