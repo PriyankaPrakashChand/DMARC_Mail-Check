@@ -911,11 +911,14 @@ void write_aws_config(String awsConfigFile) {
 	env.REACTAPPSTASH = "/mnt/jenkins-home/${env.BRANCH_NAME }-react-app-stash/"
     env.REACTAPPHASHFILE = "/mnt/jenkins-home/${env.BRANCH_NAME }-react-app-code-hash"
 	env.REACTPUBLICHASHFILE = "/mnt/jenkins-home/${env.BRANCH_NAME }-react-public-code-hash"
-    env.PUBLIC_SSH_DEPLOY_KEY_ID = readFile('/mnt/jenkins-home/public-repo-ssh-deploy-key-id').trim()
-	env.PRIVATE_SSH_DEPLOY_KEY_ID = readFile('/mnt/jenkins-home/private-repo-ssh-deploy-key-id').trim()
+     env.PUBLIC_SSH_DEPLOY_KEY_ID = ""
+    env.PRIVATE_SSH_DEPLOY_KEY_ID = ""
     env.STATE_S3_BUCKET_FILE = "/mnt/jenkins-home/state-s3-bucket"
-	env.STATE_S3_BUCKET = readFile(env.STATE_S3_BUCKET_FILE).trim()
-
+    if ( fileExists (env.STATE_S3_BUCKET_FILE) ) {
+    env.STATE_S3_BUCKET = readFile(env.STATE_S3_BUCKET_FILE).trim()
+}
+   else  {env.STATE_S3_BUCKET = env.STATE_S3_BUCKET_FILE.createNewFile()
+}
 
 //	env.APP_S3_BUCKET_FILE = "/tmp/${env.BRANCH_NAME }-app-s3-bucket"
 //    env.PUBLIC_S3_BUCKET_FILE = "/tmp/${env.BRANCH_NAME }-public-s3-bucket"
