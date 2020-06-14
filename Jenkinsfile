@@ -917,7 +917,9 @@ void write_aws_config(String awsConfigFile) {
     if ( fileExists (env.STATE_S3_BUCKET_FILE) ) {
     env.STATE_S3_BUCKET = readFile(env.STATE_S3_BUCKET_FILE).trim()
 }
-   else  {env.STATE_S3_BUCKET = env.STATE_S3_BUCKET_FILE.createNewFile()
+   else  {
+       File file = new File(env.STATE_S3_BUCKET_FILE)
+       env.STATE_S3_BUCKET = file.createNewFile()
 }
 
 //	env.APP_S3_BUCKET_FILE = "/tmp/${env.BRANCH_NAME }-app-s3-bucket"
