@@ -1,8 +1,10 @@
 properties([disableConcurrentBuilds(), pipelineTriggers([githubPush()])])
 node {
-    stage('Checkout') {
 
-//---------------- Variables/Definitions
+    def build_checkout(){
+
+
+    //---------------- Variables/Definitions
     env.WORKSPACE = pwd()
     env.JENKINSHOME = "/mnt/jenkins-home"
 	env.TERRAFORMPATH = "/mnt/jenkins-home/terraform-${env.BRANCH_NAME }"
@@ -63,6 +65,11 @@ node {
 	env.GITSHORTHASH = readFile('shorthash').trim()
 	echo "Checkout complete... extracting environment name from tfvars"
 
+    }
+    stage('Checkout') {
+        build_checkout()
+
+    
    }
    stage('Tools') {
    // Output build container environment
@@ -99,7 +106,7 @@ node {
 		echo "Role to assume: ${env.ROLE_TO_ASSUME}"
 // Get AWS account numbers from parameter store
 
-		env.AWSACCOUNT = sh(returnStdout : true, script: "${env.AWS} ssm get-parameters --names ${env.ENV_NAME}-account --region=${env.AWSREGION} | jq -r '.Parameters[0].Value'").trim()
+		env.AWSACCOUNT = "551354234311"
 		env.buildAwsAccount = sh(returnStdout : true, script: "${env.AWS} ssm get-parameters --names build-account --region=${env.AWSREGION} | jq -r '.Parameters[0].Value'").trim()
 		env.ecrAwsAccount = sh(returnStdout : true, script: "${env.AWS} ssm get-parameters --names ecr-account --region=${env.AWSREGION} | jq -r '.Parameters[0].Value'").trim()
 		if (env.ROLE_TO_ASSUME != "") {
