@@ -17,7 +17,7 @@
     "core-js": "^2.5.4",
     "downloadjs": "^1.4.7",
     "history": "^4.7.2",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.21",
     "moment": "^2.20.1",
     "numeral": "^2.0.6",
     "pluralize": "^7.0.0",
