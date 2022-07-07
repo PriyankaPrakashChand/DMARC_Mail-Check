@@ -18,7 +18,7 @@
     "downloadjs": "^1.4.7",
     "history": "^4.7.2",
     "lodash": "^4.17.4",
-    "moment": "^2.20.1",
+    "moment": "^2.29.4",
     "numeral": "^2.0.6",
     "pluralize": "^7.0.0",
     "prop-types": "^15.6.0",
